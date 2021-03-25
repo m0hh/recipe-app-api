@@ -87,7 +87,7 @@ class PublicUserApiTests(TestCase):
     def test_retreive_user_unauthorized(self):
         res = self.client.get(ME_URL)
 
-        self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
+        self.assertEqual(res.status_code, status.HTTP_403_FORBIDDEN)
 
 class PrivateUserAPITests(TestCase):
 
